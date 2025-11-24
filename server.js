@@ -9,7 +9,6 @@ const __dirname = path.dirname(__filename)
 const app = express()
 const PORT = process.env.PORT || 3000
 
-// Middleware
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(express.json())
 
@@ -22,10 +21,9 @@ app.post("/analyze", (req, res) => {
       return res.status(400).json({ error: "Ingen text mottagen" })
     }
 
-    // Använd din modul
+    // Modulen
     const stats = new DocumentStats(text)
     const summary = stats.summary()
-    const language = stats.getLanguage()
 
     // Skicka tillbaka resultatet
     res.json({
