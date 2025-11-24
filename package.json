@@ -1,0 +1,17 @@
+{
+  "name": "document-analyzer-app",
+  "version": "1.0.0",
+  "description": "Text and document analysis application",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": ["document", "analysis", "text"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
