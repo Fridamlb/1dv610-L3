@@ -24,6 +24,7 @@ app.post("/analyze", (req, res) => {
     // Modulen
     const stats = new DocumentStats(text)
     const summary = stats.summary()
+    const language = stats.getLanguage()
 
     // Skicka tillbaka resultatet
     res.json({
