@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "document-stats-analyzer": "github:Fridamlb/1DV610-L2#l3-development"
   }
 }
