@@ -1,14 +1,30 @@
+/**
+ * Renders analysis results or error messages into a DOM container.
+ */
 export default class ResultView {
   #container
 
+  /**
+   * @param {string} containerId - The id of the DOM element to render into.
+   */
   constructor(containerId) {
     this.#container = document.getElementById(containerId)
   }
 
+  /**
+   * Displays an error message to the user.
+   *
+   * @param {string} message
+   */
   showError(message) {
     this.#container.innerHTML = `<p>Fel: ${message}</p>`
   }
 
+  /**
+   * Renders the analysis result.
+   *
+   * @param {{ words: number, sentences: number, paragraphs: number, titles: string[], longestWord: string, shortestWord: string, language: string, confidence: number }} data
+   */
   showResult(data) {
     this.#container.innerHTML = `
       <hr>

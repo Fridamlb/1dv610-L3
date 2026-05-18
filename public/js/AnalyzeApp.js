@@ -1,6 +1,9 @@
 import AnalyzeClient from './AnalyzeClient.js'
 import ResultView from './ResultView.js'
 
+/**
+ * Coordinates user interaction, API calls, and result rendering.
+ */
 export default class AnalyzeApp {
   #api
   #view
@@ -14,10 +17,18 @@ export default class AnalyzeApp {
     this.#button = document.getElementById('analyzeBtn')
   }
 
+  /**
+   * Attaches event listeners and activates the application.
+   */
   start() {
     this.#button.addEventListener('click', () => this.#handleClick())
   }
 
+  /**
+   * Validates input, calls the API, and delegates rendering to the view.
+   *
+   * @returns {Promise<void>}
+   */
   async #handleClick() {
     const text = this.#input.value
     if (!text.trim()) {
@@ -32,6 +43,7 @@ export default class AnalyzeApp {
       }
       this.#view.showResult(data)
     } catch (error) {
+      // Fångar nätverksfel eller andra oväntade krascher
       this.#view.showError(error.message)
     }
   }
