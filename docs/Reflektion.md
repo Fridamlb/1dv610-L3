@@ -36,7 +36,7 @@ Koden är konsistent formaterad med 2 spaces indentation. Jag håller raderna ko
 
 **Exempel från AppServer.js:**
 
-![exampel from server.js:](/Screenshots/Example.Kap5.png.png)
+![exampel from server.js:](/Screenshots/Example.Kap5.png)
 
 ## Kapitel 6: Objects and Data Structures
 
