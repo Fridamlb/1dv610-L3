@@ -43,7 +43,6 @@ export default class AnalyzeApp {
       }
       this.#view.showResult(data)
     } catch (error) {
-      // Fångar nätverksfel eller andra oväntade krascher
       this.#view.showError(error.message)
     }
   }
